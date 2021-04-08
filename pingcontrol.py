@@ -37,7 +37,7 @@ while 1 == 1:
         else:
             state = "off"
             print(state)
-            # Add code for powering off Iot Relay
+            # Add code for powering off IoT Relay
             GPIO.output(18,GPIO.LOW)
     # Number of seconds you want program to halt before next check.
     time.sleep(10)
