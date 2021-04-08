@@ -27,7 +27,6 @@ def ping_ip(ip):
 while 1 == 1:
     if ping_ip(ip):
         state = "on"
-        print(state)
         # Add code for powering up the IoT Relay
         GPIO.output(18,GPIO.HIGH)
     else:
@@ -36,7 +35,6 @@ while 1 == 1:
             pass
         else:
             state = "off"
-            print(state)
             # Add code for powering off IoT Relay
             GPIO.output(18,GPIO.LOW)
     # Number of seconds you want program to halt before next check.
