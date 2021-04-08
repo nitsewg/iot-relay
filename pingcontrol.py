@@ -26,7 +26,6 @@ def ping_ip(ip):
 
 while 1 == 1:
     if ping_ip(ip):
-        state = "on"
         GPIO.output(18,GPIO.HIGH)
     else:
         # Wait 10 seconds and ping again to check for false negative.
@@ -34,7 +33,6 @@ while 1 == 1:
         if ping_ip(ip):
             pass
         else:
-            state = "off"
             GPIO.output(18,GPIO.LOW)
     # Number of seconds you want program to halt before next check.
     time.sleep(10)
